@@ -1,12 +1,16 @@
 import { IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle } from '@ionic/react'
+import { batteryHalf, callOutline, codeDownloadOutline, heart, heartCircle } from 'ionicons/icons';
 import React from 'react'
+
+import './Menu.css'
 
 const routes = {
   pages: [
-    { title: 'Avatars', path: '/avatars'}, //, icon: calendarOutline },
-    { title: 'Badge',   path: '/badge'}, //,   icon: peopleOutline },
-    { title: 'Button',  path: '/button'}, //,  icon: mapOutline },
-    { title: 'Slides',  path: '/slides'}, //,  icon: informationCircleOutline }
+    { title: 'Avatars', path: '/avatars', icon: callOutline },
+    { title: 'Badge',   path: '/badge',   icon: heart },
+    { title: 'Button',  path: '/button',  icon: batteryHalf },
+    { title: 'Slides',  path: '/slides',  icon: codeDownloadOutline },
+    { title: 'Tabs',    path: '/tabs',    icon: heartCircle }
   ],
   // links: [
   //   { title: 'Rate this app', path: '/account', icon: person },
@@ -18,6 +22,7 @@ const routes = {
 interface RouteItem {
   title: string,
   path: string,
+  icon: string,
 }
 
 export const Menu: React.FC = () => {
@@ -28,9 +33,10 @@ export const Menu: React.FC = () => {
       .map(item => (
         // <IonMenuToggle key={item.title}>
         //   <IonItem routerLink={item.path}>
-        <IonMenuToggle>
-          <IonItem>
-            {/* <IonIcon /> */}
+        // 아이템에는 키가 있어야 한다.
+        <IonMenuToggle key={item.title}>
+          <IonItem routerLink={item.path}>
+            <IonIcon slot="start" icon={item.icon} />
             <IonLabel>{item.title}</IonLabel>
           </IonItem>
         </IonMenuToggle>

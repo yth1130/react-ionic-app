@@ -1,7 +1,6 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonFab, IonFabButton, IonIcon, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -21,10 +20,13 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+
+import Home from './pages/Home';
 import { SlidesPage } from './pages/SlidesPage';
 import { Menu } from './components/Menu';
 import { codeWorking } from 'ionicons/icons'
 import { Tutorial } from './pages/Tutorial';
+import { TabsPage } from './pages/TabsPage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -32,10 +34,17 @@ const App: React.FC = () => (
       <IonSplitPane contentId="main">
         <Menu />
         <IonRouterOutlet id="main">
+          <Route path="/home" render={() => <Home />} />
+          <Route path="/slides" render={() => <SlidesPage />} />
+          <Route path="/tabs" render={() => <TabsPage />} />
           <Route exact path="/" render={() => <Redirect to="/slides" />} />
-          <Route exact path="/home" render={() => <Home />} />
-          <Route exact path="/slides" render={() => <SlidesPage />} />
           {/* <Route exact path="/slides" render={() => <Tutorial />} /> */}
+
+          {/* <Route exact path="/" component={() => <Redirect to="/slides" />} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/slides" component={SlidesPage} />
+          <Route exact path="/tabs" component={TabsPage} /> */}
+
         </IonRouterOutlet>
       </IonSplitPane>
       
@@ -44,6 +53,7 @@ const App: React.FC = () => (
           <IonIcon icon={codeWorking}/>
         </IonFabButton>
       </IonFab>
+      
     </IonReactRouter>
   </IonApp>
 );

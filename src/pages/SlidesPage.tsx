@@ -1,20 +1,17 @@
 import { IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonSlide, IonSlides, IonTitle, IonToolbar } from '@ionic/react'
 import { arrowForward, menu } from 'ionicons/icons'
 import React from 'react'
+import { Header } from '../components/Header'
 
 import './SlidesPage.css'
+
+// 이거 참고해서 마이그레이션하기.
+// https://ionicframework.com/docs/react/slides
 
 export const SlidesPage: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>Slides</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header title="Slides"/>
 
       <IonContent fullscreen>
         <IonSlides pager={true}>
