@@ -25,6 +25,14 @@ export const SlidesPage: React.FC = () => {
             <br />
           </IonSlide>
           <IonSlide>
+            <h2>Handy tool!</h2>
+            By clicking the button bottom right you can instantly view the source code
+            of the element you are viewing, to copy/paste and direct link to API docs. <br
+            />
+            <br />
+            <br />
+          </IonSlide>
+          <IonSlide>
             <img src="assets/img/slides/slide-2.png" alt="pict" />
             <h2>What is Ionic?</h2>
 

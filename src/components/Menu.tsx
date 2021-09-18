@@ -1,4 +1,4 @@
-import { IonContent, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle } from '@ionic/react'
+import { IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonListHeader, IonMenu, IonMenuToggle, IonTitle, IonToolbar } from '@ionic/react'
 import { batteryHalf, callOutline, codeDownloadOutline, heart, heartCircle } from 'ionicons/icons';
 import React from 'react'
 
@@ -34,22 +34,32 @@ export const Menu: React.FC = () => {
         // <IonMenuToggle key={item.title}>
         //   <IonItem routerLink={item.path}>
         // 아이템에는 키가 있어야 한다.
-        <IonMenuToggle key={item.title}>
-          <IonItem routerLink={item.path}>
+        // <IonMenuToggle key={item.title}>
+          <IonItem key={item.title} routerLink={item.path}>
             <IonIcon slot="start" icon={item.icon} />
             <IonLabel>{item.title}</IonLabel>
           </IonItem>
-        </IonMenuToggle>
+        // </IonMenuToggle>
       ));
 
   }
   return (
-    <IonMenu contentId="main" menuId="main-menu">
+    <IonMenu contentId="main" menuId="main-menu" type="overlay">
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Menu</IonTitle>
+        </IonToolbar>
+      </IonHeader>
       <IonContent>
-        <IonList lines="none">
-          <IonListHeader>Menu</IonListHeader>
+        {/* <IonList lines="none"> */}
+        <IonList>
+          {/* <IonListHeader>Menu</IonListHeader> */}
           {/* <IonItem>hoho</IonItem>
           <IonItem>haha</IonItem> */}
+          {renderRouteItems(routes.pages)}
+          {renderRouteItems(routes.pages)}
+          {renderRouteItems(routes.pages)}
+          {renderRouteItems(routes.pages)}
           {renderRouteItems(routes.pages)}
         </IonList>
       </IonContent>

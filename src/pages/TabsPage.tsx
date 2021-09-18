@@ -3,21 +3,21 @@ import React from 'react'
 import { Redirect, Route } from 'react-router';
 import { Header } from '../components/Header';
 import { ControllersTab } from './tabs/ControllersTab';
+import { GamesTab } from './tabs/GamesTab';
 import { MusicTab } from './tabs/MusicTab';
 
 export const TabsPage: React.FC = () => {
   return (
     <IonPage>
-      <Header title="Tabs"/>
+      {/* <Header title="Tabs"/> */}
 
       <IonContent>
         <IonTabs>
           <IonRouterOutlet>
             <Redirect exact path="/tabs" to="/tabs/controllers" />
-            {/* <Route path="/tabs/controllers" render={() => <ControllersTab />} exact/>
-            <Route path="/tabs/music" render={() => <MusicTab />} exact/> */}
-            <Route path="/tabs/controllers" component={ControllersTab} exact />
-            <Route path="/tabs/music" component={MusicTab} exact />
+            <Route path="/tabs/controllers" render={() => <ControllersTab />} exact/>
+            <Route path="/tabs/music" render={() => <MusicTab />} exact/>
+            <Route path="/tabs/games" render={() => <GamesTab />} exact />
           </IonRouterOutlet>
 
           <IonTabBar slot="bottom">
@@ -26,6 +26,9 @@ export const TabsPage: React.FC = () => {
             </IonTabButton>
             <IonTabButton tab="music" href="/tabs/music">
               <IonLabel>Music</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="games" href="/tabs/games">
+              <IonLabel>Games</IonLabel>
             </IonTabButton>
           </IonTabBar>
         </IonTabs>
