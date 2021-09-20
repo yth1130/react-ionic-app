@@ -1,5 +1,5 @@
-import { actionSheetController, ActionSheetOptions, AlertOptions } from '@ionic/core'
-import { IonAvatar, IonButton, IonButtons, IonContent, IonHeader, IonItem, IonLabel, IonList, IonListHeader, IonPage, IonTitle, IonToolbar, useIonActionSheet, useIonAlert, useIonModal, useIonPopover } from '@ionic/react'
+import { actionSheetController, ActionSheetOptions, AlertOptions, PickerButton } from '@ionic/core'
+import { IonAvatar, IonButton, IonButtons, IonContent, IonHeader, IonItem, IonLabel, IonList, IonListHeader, IonPage, IonTitle, IonToolbar, useIonActionSheet, useIonAlert, useIonLoading, useIonModal, useIonPicker, useIonPopover, useIonToast } from '@ionic/react'
 import React from 'react'
 import { Header } from '../../components/Header'
 
@@ -9,6 +9,10 @@ export const ControllersTab: React.FC = () => {
 
   const [showModal, hideModal] = useIonModal(Modal, { onDismiss: () => hideModal() });
   const [showPopover, hidePopover] = useIonPopover(Popover, { onHide: () => hidePopover() })
+
+  const [showLoading] = useIonLoading();
+  const [showPicker] = useIonPicker();
+  const [showToast] = useIonToast();
 
   return (
     <IonPage>
@@ -37,8 +41,14 @@ export const ControllersTab: React.FC = () => {
         <IonButton expand="block" onClick={() => showPopover()}>
           Show Popover
         </IonButton>
-        <IonButton expand="block" onClick={() => {}}>
+        <IonButton expand="block" onClick={() => showLoading("Loading", 2000, "dots")}>
           Show Loading
+        </IonButton>
+        <IonButton expand="block" onClick={() => showPicker(pickerOptions, pickerButtons)}>
+          Show Picker
+        </IonButton>
+        <IonButton expand="block" onClick={() => showToast({ color: "light", duration: 2000, message: "Paired successfully" })}>
+          Show Toast
         </IonButton>
       </IonContent>
     </IonPage>
@@ -320,3 +330,29 @@ const Popover: React.FC<{
     </IonButton>
   </IonContent>
 );
+
+const pickerOptions = [
+  {
+    name: "col-0",
+    options: [
+      { text: "Dog", value: 0 },
+      { text: "Cat", value: 1 },
+      { text: "Bird", value: 2 },
+      { text: "Lizard", value: 3 },
+      { text: "Chinchilla", value: 4 },
+    ],
+  },
+];
+
+const pickerButtons: PickerButton[] = [
+  {
+    text: "Cancel",
+    role: "cancel",
+  },
+  {
+    text: "Confirm",
+    handler: (value) => {
+      console.log(`Got Value `, value);
+    },
+  },
+];

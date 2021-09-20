@@ -57,10 +57,10 @@ export const Menu: React.FC = () => {
           {/* <IonItem>hoho</IonItem>
           <IonItem>haha</IonItem> */}
           {renderRouteItems(routes.pages)}
+          {/* {renderRouteItems(routes.pages)}
           {renderRouteItems(routes.pages)}
           {renderRouteItems(routes.pages)}
-          {renderRouteItems(routes.pages)}
-          {renderRouteItems(routes.pages)}
+          {renderRouteItems(routes.pages)} */}
         </IonList>
       </IonContent>
     </IonMenu>

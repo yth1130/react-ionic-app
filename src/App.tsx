@@ -27,6 +27,8 @@ import { Menu } from './components/Menu';
 import { codeWorking } from 'ionicons/icons'
 import { Tutorial } from './pages/Tutorial';
 import { TabsPage } from './pages/TabsPage';
+import { AvatarPage } from './pages/AvatarPage';
+import { GamesTabDetailPage } from './pages/tabs/GamesTabDetailPage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -34,10 +36,13 @@ const App: React.FC = () => (
       <IonSplitPane contentId="main">
         <Menu />
         <IonRouterOutlet id="main">
+          <Route exact path="/" render={() => <Redirect to="/slides" />} />
           <Route path="/home" render={() => <Home />} />
           <Route path="/slides" render={() => <SlidesPage />} />
           <Route path="/tabs" render={() => <TabsPage />} />
-          <Route exact path="/" render={() => <Redirect to="/slides" />} />
+          <Route path="/avatars" render={() => <AvatarPage />} />
+
+          <Route path="/detail" render={() => <GamesTabDetailPage />} />
           {/* <Route exact path="/slides" render={() => <Tutorial />} /> */}
 
           {/* <Route exact path="/" component={() => <Redirect to="/slides" />} />
