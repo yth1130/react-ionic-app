@@ -1,5 +1,5 @@
 import { IonPage, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent, IonIcon } from '@ionic/react'
-import { logoTux } from 'ionicons/icons';
+// import { logoTux } from 'ionicons/icons';
 import React, { useEffect } from 'react'
 import { useLocation } from 'react-router'
 

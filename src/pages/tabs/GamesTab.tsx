@@ -1,5 +1,5 @@
 import { IonBackButton, IonButton, IonButtons, IonContent, IonHeader, IonNav, IonPage, IonRouterOutlet, IonTitle, IonToolbar, useIonRouter } from '@ionic/react'
-import { logoTux } from 'ionicons/icons'
+import { logoReact, logoTux } from 'ionicons/icons'
 import React from 'react'
 import { Redirect, Route, useHistory } from 'react-router'
 import { Header } from '../../components/Header'
@@ -10,37 +10,31 @@ import { MusicTab } from './MusicTab'
 
 export const GamesTab: React.FC = () => {
   const history = useHistory();
-  // const router = useIonRouter();
-  const onClickButton = () => {
-    // history.replace("/detail", {title:"asd"});
-    // router.push("/detail", "forward", "push", {});
-    history.push("/detail", { 
-      title: 'Tux',
-      icon: logoTux,
-      description: 'The official mascot of the Linux kernel!',
-      color: '#000'
-    });
-  }
+  // https://stackoverflow.com/questions/44121069/how-to-pass-params-with-history-push-link-redirect-in-react-router-v4
+  // const onClickButton = (infos: any) => {
+  //   history.push("/detail", infos);
+  // }
 
   return (
     <IonPage>
       <Header title="Games" />
       <IonContent>
-        {/* <IonRouterOutlet> */}
-          {/* <Redirect exact path="/tabs/games" to="/tabs/games" /> */}
-          {/* <Route path="/tabs/games/detail" render={() => <GamesTabDetailPage />} exact /> */}
-        {/* </IonRouterOutlet> */}
-        {/* <IonButton expand="full" color="secondary" onClick={() => showDetail("Tux")}> */}
-        {/* <IonButton expand="full" color="secondary" onClick={() => history.push("/tabs/games/detail")}> */}
-        {/* <IonButton expand="full" color="secondary" routerLink="/tabs/music"> */}
-        {/* <IonButton expand="full" color="secondary" routerLink="/detail" routerOptions="forward"> */}
-        {/* <IonButton expand="full" color="secondary" onClick={() => history.replace("/detail", {title:"asd"})}> */}
-        {/* <IonButton expand="full" color="secondary"> */}
-        <IonButton expand="full" color="secondary" onClick={() => onClickButton()}>
+        <IonButton expand="full" color="secondary" onClick={() => history.push("/detail", {
+          title: 'Tux',
+          icon: logoTux,
+          description: 'The official mascot of the Linux kernel!',
+          color: '#000'
+        })}>
           Open a detail nav with back button.
         </IonButton>
-        This is not working. Issue is that the Nav and the Tabs are not working nicely
-          together. We need an ion-nav element to do the push. So not resolved yet....
+        <IonButton expand="full" color="secondary" onClick={() => history.push("/detail", {
+          title: 'React',
+          icon: logoReact,
+          description: 'A JavaScript library for building user interfaces',
+          color: '#61DBFB'
+        })}>
+          Click this!
+        </IonButton>
       </IonContent>
     </IonPage>
   )
