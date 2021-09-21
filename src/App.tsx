@@ -29,6 +29,9 @@ import { Tutorial } from './pages/Tutorial';
 import { TabsPage } from './pages/TabsPage';
 import { AvatarPage } from './pages/AvatarPage';
 import { GamesTabDetailPage } from './pages/tabs/GamesTabDetailPage';
+import { BadgePage } from './pages/BadgePage';
+import { ButtonPage } from './pages/ButtonPage';
+import { CardPage } from './pages/CardPage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -41,6 +44,10 @@ const App: React.FC = () => (
           <Route path="/slides" render={() => <SlidesPage />} />
           <Route path="/tabs" render={() => <TabsPage />} />
           <Route path="/avatars" render={() => <AvatarPage />} />
+
+          <Route path="/badge" render={() => <BadgePage />} />
+          <Route path="/button" render={() => <ButtonPage />} />
+          <Route path="/card" render={() => <CardPage />} />
 
           <Route path="/detail" render={() => <GamesTabDetailPage />} />
           {/* <Route exact path="/slides" render={() => <Tutorial />} /> */}
