@@ -32,6 +32,7 @@ import { GamesTabDetailPage } from './pages/tabs/GamesTabDetailPage';
 import { BadgePage } from './pages/BadgePage';
 import { ButtonPage } from './pages/ButtonPage';
 import { CardPage } from './pages/CardPage';
+import { CheckboxPage } from './pages/CheckboxPage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -48,6 +49,7 @@ const App: React.FC = () => (
           <Route path="/badge" render={() => <BadgePage />} />
           <Route path="/button" render={() => <ButtonPage />} />
           <Route path="/card" render={() => <CardPage />} />
+          <Route path="/checkbox" render={() => <CheckboxPage />} />
 
           <Route path="/detail" render={() => <GamesTabDetailPage />} />
           {/* <Route exact path="/slides" render={() => <Tutorial />} /> */}

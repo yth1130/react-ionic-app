@@ -10,6 +10,8 @@ const routes = {
     { title: 'Badge',   path: '/badge',   icon: heart },
     { title: 'Button',  path: '/button',  icon: batteryHalf },
     { title: 'Card',    path: '/card',    icon: batteryHalf },
+    { title: 'Checkbox',path: '/checkbox',    icon: batteryHalf },
+
     { title: 'Slides',  path: '/slides',  icon: codeDownloadOutline },
     { title: 'Tabs',    path: '/tabs',    icon: heartCircle }
   ],
