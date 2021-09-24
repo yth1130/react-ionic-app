@@ -11,6 +11,11 @@ const routes = {
     { title: 'Button',  path: '/button',  icon: batteryHalf },
     { title: 'Card',    path: '/card',    icon: batteryHalf },
     { title: 'Checkbox',path: '/checkbox',    icon: batteryHalf },
+    { title: 'Chip',    path: '/chip',    icon: batteryHalf },
+    { title: 'Controllers',    path: '/controllers',    icon: batteryHalf },
+    { title: 'Datetime',path: '/datetime',icon: batteryHalf },
+    { title: 'Fab',     path: '/fab',icon: batteryHalf },
+    { title: 'Grid',    path: '/grid',icon: batteryHalf },
 
     { title: 'Slides',  path: '/slides',  icon: codeDownloadOutline },
     { title: 'Tabs',    path: '/tabs',    icon: heartCircle }

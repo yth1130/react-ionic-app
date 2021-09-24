@@ -33,6 +33,11 @@ import { BadgePage } from './pages/BadgePage';
 import { ButtonPage } from './pages/ButtonPage';
 import { CardPage } from './pages/CardPage';
 import { CheckboxPage } from './pages/CheckboxPage';
+import { ChipPage } from './pages/ChipPage';
+import { ControllersTab } from './pages/tabs/ControllersTab';
+import { DatetimePage } from './pages/DatetimePage';
+import { FabPage } from './pages/FabPage';
+import { GridPage } from './pages/GridPage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -50,6 +55,11 @@ const App: React.FC = () => (
           <Route path="/button" render={() => <ButtonPage />} />
           <Route path="/card" render={() => <CardPage />} />
           <Route path="/checkbox" render={() => <CheckboxPage />} />
+          <Route path="/chip" render={() => <ChipPage />} />
+          <Route path="/controllers" render={() => <ControllersTab />} />
+          <Route path="/datetime" render={() => <DatetimePage />} />
+          <Route path="/fab" render={() => <FabPage />} />
+          <Route path="/grid" render={() => <GridPage />} />
 
           <Route path="/detail" render={() => <GamesTabDetailPage />} />
           {/* <Route exact path="/slides" render={() => <Tutorial />} /> */}
