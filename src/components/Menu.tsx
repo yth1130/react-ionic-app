@@ -16,6 +16,8 @@ const routes = {
     { title: 'Datetime',path: '/datetime',icon: batteryHalf },
     { title: 'Fab',     path: '/fab',icon: batteryHalf },
     { title: 'Grid',    path: '/grid',icon: batteryHalf },
+    { title: 'Icon',    path: '/icon',icon: batteryHalf },
+    { title: 'Infinite Scroll',    path: '/infinitescroll',icon: batteryHalf },
 
     { title: 'Slides',  path: '/slides',  icon: codeDownloadOutline },
     { title: 'Tabs',    path: '/tabs',    icon: heartCircle }

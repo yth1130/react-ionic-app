@@ -38,6 +38,8 @@ import { ControllersTab } from './pages/tabs/ControllersTab';
 import { DatetimePage } from './pages/DatetimePage';
 import { FabPage } from './pages/FabPage';
 import { GridPage } from './pages/GridPage';
+import { IconPage } from './pages/IconPage';
+import { InfiniteScrollPage } from './pages/InfiniteScrollPage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -59,7 +61,11 @@ const App: React.FC = () => (
           <Route path="/controllers" render={() => <ControllersTab />} />
           <Route path="/datetime" render={() => <DatetimePage />} />
           <Route path="/fab" render={() => <FabPage />} />
+
           <Route path="/grid" render={() => <GridPage />} />
+          <Route path="/icon" render={() => <IconPage />} />
+          {/* <Route path="/icon" component={IconPage} /> */}
+          <Route path="/infinitescroll" render={() => <InfiniteScrollPage />} />
 
           <Route path="/detail" render={() => <GamesTabDetailPage />} />
           {/* <Route exact path="/slides" render={() => <Tutorial />} /> */}
