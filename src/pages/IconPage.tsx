@@ -3,10 +3,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import * as Icons from 'ionicons/icons'
 
 export const IconPage: React.FC = () => {
-  const searchbar = useRef(null);
 
-  let totalIcons: any;
-  // let icons: any;
+  const [totalIcons, setTotalIcons] = useState<any>([]);
   const [icons, setIcons] = useState<any>([]);
   const [showToast] = useIonToast();
 
@@ -48,6 +46,17 @@ export const IconPage: React.FC = () => {
     });
   }
 
+  const onChangeSearchbar = (e: any) => {
+    console.log(e.detail.value);
+    const searchText = e.detail.value.toLowerCase();
+    if (searchText != "") {
+      setIcons(totalIcons.filter((icon: string) => icon.toLowerCase().indexOf(searchText) > -1));
+    }
+    else {
+      setIcons([].concat(totalIcons));
+    }
+  }
+
   // useIonViewDidEnter(() => {
   //   console.log('ionViewDidEnter event fired');
   // });
@@ -65,17 +74,22 @@ export const IconPage: React.FC = () => {
   // });
 
   useEffect(() => {
+    console.log("IconPage. useEffect");
     fetch('assets/data/ionicons.json').then(async res => {
       const data = await res.json();
       // console.log("List of icons", data);
       // console.log(typeof(data)); // object
-      totalIcons = data.icons;
+      // totalIcons = data.icons;
+      const fixedIcons = convertIconNames(data.icons);
+      setTotalIcons(fixedIcons);
       // console.log("List of icons", totalIcons);
 
-      setIcons(convertIconNames(totalIcons.slice(0, 300)));
+      // setIcons(convertIconNames(totalIcons.slice(0, 300)));
+      setIcons(fixedIcons.slice(0, 300));
       setTimeout(() => {
-        setIcons(convertIconNames([].concat(totalIcons)));
-    }, 3000);
+        // setIcons(convertIconNames([].concat(totalIcons)));
+        setIcons([].concat(fixedIcons as any));
+      }, 3000);
     });
   }, []);
 
@@ -91,7 +105,7 @@ export const IconPage: React.FC = () => {
         <IonToolbar>
           <IonSearchbar 
             showCancelButton="never"
-            ref={searchbar}
+            onIonChange={(e) => onChangeSearchbar(e)}
           />
         </IonToolbar>
       </IonHeader>
