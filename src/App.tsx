@@ -40,6 +40,7 @@ import { FabPage } from './pages/FabPage';
 import { GridPage } from './pages/GridPage';
 import { IconPage } from './pages/IconPage';
 import { InfiniteScrollPage } from './pages/InfiniteScrollPage';
+import { InputPage } from './pages/InputPage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -66,6 +67,8 @@ const App: React.FC = () => (
           <Route path="/icon" render={() => <IconPage />} />
           {/* <Route path="/icon" component={IconPage} /> */}
           <Route path="/infinitescroll" render={() => <InfiniteScrollPage />} />
+
+          <Route path="/input" render={() => <InputPage />} />
 
           <Route path="/detail" render={() => <GamesTabDetailPage />} />
           {/* <Route exact path="/slides" render={() => <Tutorial />} /> */}
