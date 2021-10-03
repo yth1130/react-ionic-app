@@ -41,6 +41,11 @@ import { GridPage } from './pages/GridPage';
 import { IconPage } from './pages/IconPage';
 import { InfiniteScrollPage } from './pages/InfiniteScrollPage';
 import { InputPage } from './pages/InputPage';
+import { ItemPage } from './pages/ItemPage';
+import { ListPage } from './pages/ListPage';
+import { NavPage } from './pages/NavPage';
+import { NotePage } from './pages/NotePage';
+import { NavDetailPage } from './pages/NavDetailPage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -69,6 +74,13 @@ const App: React.FC = () => (
           <Route path="/infinitescroll" render={() => <InfiniteScrollPage />} />
 
           <Route path="/input" render={() => <InputPage />} />
+          <Route path="/item" render={() => <ItemPage />} />
+          <Route path="/list" render={() => <ListPage />} />
+
+          <Route path="/nav" render={() => <NavPage />} exact/>
+          <Route path="/nav/detail" render={() => <NavDetailPage />} />
+
+          <Route path="/note" render={() => <NotePage />} />
 
           <Route path="/detail" render={() => <GamesTabDetailPage />} />
           {/* <Route exact path="/slides" render={() => <Tutorial />} /> */}

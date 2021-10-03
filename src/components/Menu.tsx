@@ -19,6 +19,11 @@ const routes = {
     { title: 'Icon',    path: '/icon',icon: batteryHalf },
     { title: 'Infinite Scroll',    path: '/infinitescroll',icon: batteryHalf },
     { title: 'Inputs',    path: '/input',icon: batteryHalf },
+    { title: 'Item',    path: '/item',icon: batteryHalf },
+
+    { title: 'List',    path: '/list',icon: batteryHalf },
+    { title: 'Nav',    path: '/nav',icon: batteryHalf },
+    { title: 'Note',    path: '/note',icon: batteryHalf },
 
     { title: 'Slides',  path: '/slides',  icon: codeDownloadOutline },
     { title: 'Tabs',    path: '/tabs',    icon: heartCircle }
