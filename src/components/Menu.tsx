@@ -28,6 +28,10 @@ const routes = {
     { title: 'Radio',    path: '/radio',icon: batteryHalf },
     { title: 'Range',    path: '/range',icon: batteryHalf },
 
+    { title: 'Refresher',    path: '/refresher',icon: batteryHalf },
+    { title: 'Reorder',    path: '/reorder',icon: batteryHalf },
+    { title: 'Searchbar',    path: '/searchbar',icon: batteryHalf },
+
     { title: 'Slides',  path: '/slides',  icon: codeDownloadOutline },
     { title: 'Tabs',    path: '/tabs',    icon: heartCircle }
   ],

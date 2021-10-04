@@ -49,6 +49,9 @@ import { NavDetailPage } from './pages/NavDetailPage';
 import { ProgressPage } from './pages/ProgressPage';
 import { RadioPage } from './pages/RadioPage';
 import { RangePage } from './pages/RangePage';
+import { RefresherPage } from './pages/RefresherPage';
+import { ReorderPage } from './pages/ReorderPage';
+import { SearchbarPage } from './pages/SearchbarPage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -87,6 +90,10 @@ const App: React.FC = () => (
           <Route path="/progress" render={() => <ProgressPage />} />
           <Route path="/radio" render={() => <RadioPage />} />
           <Route path="/range" render={() => <RangePage />} />
+          
+          <Route path="/refresher" render={() => <RefresherPage />} />
+          <Route path="/reorder" render={() => <ReorderPage />} />
+          <Route path="/searchbar" render={() => <SearchbarPage />} />
 
           <Route path="/detail" render={() => <GamesTabDetailPage />} />
           {/* <Route exact path="/slides" render={() => <Tutorial />} /> */}
