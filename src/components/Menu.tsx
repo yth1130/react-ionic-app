@@ -24,6 +24,9 @@ const routes = {
     { title: 'List',    path: '/list',icon: batteryHalf },
     { title: 'Nav',    path: '/nav',icon: batteryHalf },
     { title: 'Note',    path: '/note',icon: batteryHalf },
+    { title: 'Progress',    path: '/progress',icon: batteryHalf },
+    { title: 'Radio',    path: '/radio',icon: batteryHalf },
+    { title: 'Range',    path: '/range',icon: batteryHalf },
 
     { title: 'Slides',  path: '/slides',  icon: codeDownloadOutline },
     { title: 'Tabs',    path: '/tabs',    icon: heartCircle }
