@@ -52,6 +52,9 @@ import { RangePage } from './pages/RangePage';
 import { RefresherPage } from './pages/RefresherPage';
 import { ReorderPage } from './pages/ReorderPage';
 import { SearchbarPage } from './pages/SearchbarPage';
+import { SegmentPage } from './pages/SegmentPage';
+import { SkeletonPage } from './pages/SkeletonPage';
+import { SelectPage } from './pages/SelectPage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -94,6 +97,10 @@ const App: React.FC = () => (
           <Route path="/refresher" render={() => <RefresherPage />} />
           <Route path="/reorder" render={() => <ReorderPage />} />
           <Route path="/searchbar" render={() => <SearchbarPage />} />
+
+          <Route path="/segment" render={() => <SegmentPage />} />
+          <Route path="/select" render={() => <SelectPage />} />
+          <Route path="/skeleton" render={() => <SkeletonPage />} />
 
           <Route path="/detail" render={() => <GamesTabDetailPage />} />
           {/* <Route exact path="/slides" render={() => <Tutorial />} /> */}

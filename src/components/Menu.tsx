@@ -32,6 +32,10 @@ const routes = {
     { title: 'Reorder',    path: '/reorder',icon: batteryHalf },
     { title: 'Searchbar',    path: '/searchbar',icon: batteryHalf },
 
+    { title: 'Segment',    path: '/segment',icon: batteryHalf },
+    { title: 'Select',    path: '/select',icon: batteryHalf },
+    { title: 'Skeleton',    path: '/skeleton',icon: batteryHalf },
+
     { title: 'Slides',  path: '/slides',  icon: codeDownloadOutline },
     { title: 'Tabs',    path: '/tabs',    icon: heartCircle }
   ],
