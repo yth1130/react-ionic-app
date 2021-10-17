@@ -39,6 +39,7 @@ const routes = {
     { title: 'Slides',  path: '/slides',  icon: codeDownloadOutline },
     { title: 'Tabs',    path: '/tabs',    icon: heartCircle },
 
+    { title: 'Text', path: '/text', icon: heartCircle },
     { title: 'Thumbnail', path: '/thumbnail', icon: heartCircle },
     { title: 'Timeline', path: '/timeline', icon: heartCircle },
     { title: 'Toggle', path: '/toggle', icon: heartCircle },

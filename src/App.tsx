@@ -59,6 +59,7 @@ import { ToolbarPage } from './pages/ToolbarPage';
 import { TogglePage } from './pages/TogglePage';
 import { ThumbnailsPage } from './pages/ThumbnailsPage';
 import { TimelinePage } from './pages/TimelinePage';
+import { TextPage } from './pages/TextPage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -114,8 +115,9 @@ const App: React.FC = () => (
           <Route exact path="/slides" component={SlidesPage} />
           <Route exact path="/tabs" component={TabsPage} /> */}
 
+          <Route path="/text" render={() => <TextPage />} />
           <Route path="/thumbnail" render={() => <ThumbnailsPage />} />
-          <Route path="/timeline" render={() => <TimelinePage />} />
+          <Route path="/timeline" component={() => <TimelinePage />} />
           <Route path="/toggle" render={() => <TogglePage />} />
           <Route path="/toolbar" render={() => <ToolbarPage />} />
 

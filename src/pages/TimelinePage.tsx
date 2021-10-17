@@ -39,7 +39,7 @@ export const TimelinePage: React.FC = () => {
 const TimelineDemo1: React.FC = () => {
   return (
     <IonCard>
-      <h4>Timeline Style : Demo-1</h4>
+      <h4 className="timeline-title">Timeline Style : Demo-1</h4>
       <div className="row">
         <div className="col-md-12">
           <div className="main-timeline">
@@ -97,7 +97,7 @@ const TimelineDemo1: React.FC = () => {
 const TimelineDemo2: React.FC = () => {
   return (
     <IonCard>
-      <h4>Timeline Style : Demo-2</h4>
+      <h4 className="timeline-title">Timeline Style : Demo-2</h4>
       <div className="row">
         <div className="col-md-12">
           <div className="main-timeline2">
@@ -151,7 +151,7 @@ const TimelineDemo2: React.FC = () => {
 const TimelineDemo3: React.FC = () => {
   return (
     <IonCard>
-      <h4>Timeline Style : Demo-3</h4>
+      <h4 className="timeline-title">Timeline Style : Demo-3</h4>
       <div className="row">
         <div className="col-md-12">
           <div className="main-timeline3">
@@ -205,7 +205,7 @@ const TimelineDemo3: React.FC = () => {
 const TimelineDemo4: React.FC = () => {
   return (
     <IonCard>
-      <h4>Timeline Style : Demo-4</h4>
+      <h4 className="timeline-title">Timeline Style : Demo-4</h4>
       <div className="row">
         <div className="col-md-12">
           <div className="main-timeline4">
@@ -271,7 +271,7 @@ const TimelineDemo4: React.FC = () => {
 const TimelineDemo5: React.FC = () => {
   return (
     <IonCard>
-      <h4>Timeline Style : Demo-5</h4>
+      <h4 className="timeline-title">Timeline Style : Demo-5</h4>
       <div className="row">
         <div className="col-md-12">
           <div className="main-timeline5">
@@ -329,7 +329,7 @@ const TimelineDemo5: React.FC = () => {
 const TimelineDemo6: React.FC = () => {
   return (
     <IonCard>
-      <h4>Timeline Style : Demo-6</h4>
+      <h4 className="timeline-title">Timeline Style : Demo-6</h4>
       <div className="row">
         <div className="col-md-12">
           <div className="main-timeline6">
@@ -403,7 +403,7 @@ const TimelineDemo6: React.FC = () => {
 const TimelineDemo7: React.FC = () => {
   return (
     <IonCard>
-      <h4>Timeline Style : Demo-7</h4>
+      <h4 className="timeline-title">Timeline Style : Demo-7</h4>
       <div className="row">
         <div className="col-md-12">
           <div className="main-timeline7">
@@ -465,7 +465,7 @@ const TimelineDemo7: React.FC = () => {
 const TimelineDemo8: React.FC = () => {
   return (
     <IonCard>
-      <h4>Timeline Style : Demo-8</h4>
+      <h4 className="timeline-title">Timeline Style : Demo-8</h4>
       <div className="row">
         <div className="col-md-12">
           <div className="main-timeline8">
@@ -535,7 +535,7 @@ const TimelineDemo8: React.FC = () => {
 const TimelineDemo9: React.FC = () => {
   return (
     <IonCard>
-      <h4>Timeline Style : Demo-9</h4>
+      <h4 className="timeline-title">Timeline Style : Demo-9</h4>
       <div className="row">
         <div className="col-md-12">
           <div className="main-timeline9">
@@ -625,7 +625,7 @@ const TimelineDemo9: React.FC = () => {
 const TimelineDemo10: React.FC = () => {
   return (
     <IonCard>
-      <h4>Timeline Style : Demo-10</h4>
+      <h4 className="timeline-title">Timeline Style : Demo-10</h4>
       <div className="row">
         <div className="main-timeline10">
           <div className="col-md-3 col-sm-6 timeline">
@@ -693,7 +693,7 @@ const TimelineDemo10: React.FC = () => {
 const TimelineDemo11: React.FC = () => {
   return (
     <IonCard>
-      <h4>Timeline Style : Demo-11</h4>
+      <h4 className="timeline-title">Timeline Style : Demo-11</h4>
       <div className="row">
         <div className="col-md-12">
           <div className="main-timeline11">
@@ -777,7 +777,7 @@ const TimelineDemo11: React.FC = () => {
 const TimelineDemo12: React.FC = () => {
   return (
     <IonCard>
-      <h4>Timeline Style : Demo-12</h4>
+      <h4 className="timeline-title">Timeline Style : Demo-12</h4>
       <div className="row">
         <div className="col-md-12">
           <div className="main-timeline12">
