@@ -55,6 +55,10 @@ import { SearchbarPage } from './pages/SearchbarPage';
 import { SegmentPage } from './pages/SegmentPage';
 import { SkeletonPage } from './pages/SkeletonPage';
 import { SelectPage } from './pages/SelectPage';
+import { ToolbarPage } from './pages/ToolbarPage';
+import { TogglePage } from './pages/TogglePage';
+import { ThumbnailsPage } from './pages/ThumbnailsPage';
+import { TimelinePage } from './pages/TimelinePage';
 
 const App: React.FC = () => (
   <IonApp>
@@ -109,6 +113,11 @@ const App: React.FC = () => (
           <Route exact path="/home" component={Home} />
           <Route exact path="/slides" component={SlidesPage} />
           <Route exact path="/tabs" component={TabsPage} /> */}
+
+          <Route path="/thumbnail" render={() => <ThumbnailsPage />} />
+          <Route path="/timeline" render={() => <TimelinePage />} />
+          <Route path="/toggle" render={() => <TogglePage />} />
+          <Route path="/toolbar" render={() => <ToolbarPage />} />
 
         </IonRouterOutlet>
       </IonSplitPane>

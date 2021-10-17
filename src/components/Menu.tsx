@@ -37,7 +37,12 @@ const routes = {
     { title: 'Skeleton',    path: '/skeleton',icon: batteryHalf },
 
     { title: 'Slides',  path: '/slides',  icon: codeDownloadOutline },
-    { title: 'Tabs',    path: '/tabs',    icon: heartCircle }
+    { title: 'Tabs',    path: '/tabs',    icon: heartCircle },
+
+    { title: 'Thumbnail', path: '/thumbnail', icon: heartCircle },
+    { title: 'Timeline', path: '/timeline', icon: heartCircle },
+    { title: 'Toggle', path: '/toggle', icon: heartCircle },
+    { title: 'Toolbar', path: '/toolbar', icon: heartCircle },
   ],
   // links: [
   //   { title: 'Rate this app', path: '/account', icon: person },
