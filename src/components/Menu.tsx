@@ -37,6 +37,8 @@ const routes = {
     { title: 'Skeleton',    path: '/skeleton',icon: batteryHalf },
 
     { title: 'Slides',  path: '/slides',  icon: codeDownloadOutline },
+    { title: 'Spinner',  path: '/spinner',  icon: codeDownloadOutline },
+    { title: 'Splash', path: '/splash', icon: heartCircle },
     { title: 'Tabs',    path: '/tabs',    icon: heartCircle },
 
     { title: 'Text', path: '/text', icon: heartCircle },
